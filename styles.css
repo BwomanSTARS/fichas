@@ -1,0 +1,710 @@
+:root {
+    --primary-color: #ff69b4;
+    --secondary-color: #4a4a4a;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--header-bg);
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--section-bg);
+}
+
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.table-of-contents {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.table-of-contents ul {
+    list-style: none;
+}
+
+.table-of-contents a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+
+.content-sections {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.section-content {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.info-item {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    font-weight: 500;
+    color: var(--primary-color);
+    min-width: 120px;
+}
+
+.value {
+    color: var(--text-color);
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.specialty-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+}
+
+.specialty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.specialty-card h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.education-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.education-header h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.education-year {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.education-institution {
+    color: var(--text-color);
+    font-style: italic;
+    margin: 0;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.experience-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.experience-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.experience-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.approach-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.approach-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.approach-card p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.approach-card p:last-child {
+    margin-bottom: 0;
+}
+
+.main-approach {
+    border-left: 4px solid var(--primary-color);
+}
+
+.motivation h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.motivation-text {
+    color: var(--text-color);
+}
+
+.quote {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    background-color: var(--section-bg);
+}
+
+.consultation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.consultation-duration {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.consultation-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.step-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.step-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.step-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.step-card li::before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.pricing-alert {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.modalities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.modality-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.modality-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modality-icon {
+    font-size: 2rem;
+}
+
+.modality-price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.modality-details h4 {
+    color: var(--primary-color);
+    margin: 1rem 0 0.5rem;
+}
+
+.modality-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.address {
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.category-section {
+    margin-bottom: 1.5rem;
+}
+
+.category-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 0.25rem;
+}
+
+.procedure-link {
+    display: block;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.procedure-link:hover {
+    background-color: var(--hover-color);
+    color: white;
+    padding-left: 1rem;
+}
+
+/* Procedure specific styles */
+.procedure-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.procedure-header {
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.procedure-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.procedure-code {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.procedure-section {
+    margin-bottom: 2rem;
+}
+
+.procedure-section:last-child {
+    margin-bottom: 0;
+}
+
+.procedure-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.procedure-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.procedure-list li {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.procedure-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: -1.5rem;
+}
+
+.procedure-warning {
+    background-color: #fff3cd;
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.procedure-price {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.procedure-price .value {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Markdown content styles */
+#markdownContent {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#markdownContent h2 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+#markdownContent strong {
+    color: var(--primary-color);
+}
+
+#markdownContent ul {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+#markdownContent ul li {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+#markdownContent ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: -1rem;
+}
+
+#markdownContent p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.error-message {
+    padding: 1rem;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.error-message h3 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+/* Enhanced navigation styles */
+.content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    padding: 0 1rem;
+}
+
+.sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin: 0 0 1rem 0;
+    }
+
+    .content-sections {
+        padding: 1rem;
+    }
+    
+    .specialties-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .specialty-card {
+        padding: 1rem;
+    }
+    
+    .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .education-card {
+        padding: 1rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .experience-card {
+        padding: 1rem;
+    }
+
+    .approach-card {
+        padding: 1.5rem;
+    }
+
+    .quote {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modalities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: static;
+        margin-bottom: 1rem;
+    }
+}

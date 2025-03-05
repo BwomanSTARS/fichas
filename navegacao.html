@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Woman Stars - Fichas Técnicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Navigation specific styles */
+        .nav-numbers {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-numbers a {
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-numbers a:hover,
+        .nav-numbers a.active {
+            background: var(--primary-color);
+            color: white;
+            padding-left: 1rem;
+        }
+
+        .content-section {
+            display: none;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        iframe {
+            width: 100%;
+            min-height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Beauty Woman Stars</h1>
+            <h2>Fichas Técnicas de Procedimentos</h2>
+        </header>
+        
+        <div class="content">
+            <nav class="sidebar">
+                <h3>Procedimentos</h3>
+                <ul class="nav-numbers">
+                    <li><a href="#section1" data-name="Peeling de Ácido Retinóico">1. Peeling Retinóico</a></li>
+                    <li><a href="#section2" data-name="Microagulhamento Coreano">2. Microagulhamento</a></li>
+                    <li><a href="#section3" data-name="Limpeza e Peeling Ultrassônico">3. Limpeza de Pele</a></li>
+                    <li><a href="#section4" data-name="Máscara Rejuvenescedora">4. Máscara Facial</a></li>
+                    <li><a href="#section5" data-name="Radiofrequência Facial">5. Radiofrequência</a></li>
+                    <li><a href="#section6" data-name="Skinbooster">6. Skinbooster</a></li>
+                    <li><a href="#section7" data-name="Lipoenzimas para Celulite">7. Lipoenzimas Celulite</a></li>
+                    <li><a href="#section8" data-name="Lipoenzimas para Gordura">8. Lipoenzimas Gordura</a></li>
+                    <li><a href="#section9" data-name="Depilação a Laser">9. Depilação</a></li>
+                    <li><a href="#section10" data-name="Toxina Botulínica">10. Botox</a></li>
+                    <li><a href="#section11" data-name="Preenchimento Labial">11. Preenchimento Labial</a></li>
+                    <li><a href="#section12" data-name="Preenchimento Full Face">12. Full Face</a></li>
+                    <li><a href="#section13" data-name="Bioestimulador de Colágeno">13. Bioestimulador</a></li>
+                </ul>
+            </nav>
+            
+            <main id="procedureContent">
+                <div id="content">
+                    <section id="section1" class="content-section">
+                        <iframe src="web/peeling-retinóico.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section2" class="content-section">
+                        <iframe src="web/microagulhamento-coreano.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section3" class="content-section">
+                        <iframe src="web/limpeza-peeling-ultrassonico.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section4" class="content-section">
+                        <iframe src="web/mascara-rejuvenescedora.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section5" class="content-section">
+                        <iframe src="web/radiofrequencia-facial.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section6" class="content-section">
+                        <iframe src="web/skinbooster.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section7" class="content-section">
+                        <iframe src="web/lipoenzima-celulite.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section8" class="content-section">
+                        <iframe src="web/lipoenzima-gordura.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section9" class="content-section">
+                        <iframe src="web/depilacao-laser.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section10" class="content-section">
+                        <iframe src="web/botox.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section11" class="content-section">
+                        <iframe src="web/preenchimento-labial.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section12" class="content-section">
+                        <iframe src="web/preenchimento-full-face.html" loading="lazy"></iframe>
+                    </section>
+                    <section id="section13" class="content-section">
+                        <iframe src="web/bioestimulador-colageno.html" loading="lazy"></iframe>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-numbers a');
+            const sections = document.querySelectorAll('.content-section');
+
+            // Show first section by default
+            sections[0].classList.add('active');
+            navLinks[0].classList.add('active');
+
+            // Add click events
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    this.classList.add('active');
+                    targetSection.classList.add('active');
+
+                    // Update page title with procedure name
+                    document.title = `${this.getAttribute('data-name')} - Beauty Woman Stars`;
+                });
+            });
+
+            // Frame height adjustment
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                iframe.onload = function() {
+                    try {
+                        this.style.height = this.contentWindow.document.documentElement.scrollHeight + 'px';
+                    } catch (e) {
+                        console.error('Erro ao ajustar altura:', e);
+                    }
+                };
+            });
+        });
+    </script>
+</body>
+</html>
